@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-au">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache" />
+</head>
+
+<body>
+  <script type="text/javascript">
+    function generatePoints() {
+      var pointsToGenerate = document.getElementById('pointsToGenerate').value;
+
+      var output = '';
+
+      for (i = 0; i < pointsToGenerate; i++) {
+        var multiplier = 10000;
+        var latitude = (Math.random() * (90 * multiplier)) / multiplier;
+        var longitude = (Math.random() * (180 * multiplier)) / multiplier;
+        latitude *= (Math.floor(Math.random() * 2) == 1) ? 1 : -1;
+        longitude *= (Math.floor(Math.random() * 2) == 1) ? 1 : -1;
+        output = output + latitude + ',' + longitude + '\n';
+      }
+
+      document.getElementById('output').innerHTML = output;
+    }
+  </script>
+  <input type="text" id="pointsToGenerate" value="1000" />
+  <input type="button" onclick="generatePoints()" value="Generate Points" />
+  <div><textarea cols=40 rows=10 id="output"></textarea></div>
+</body>
+
+</html>

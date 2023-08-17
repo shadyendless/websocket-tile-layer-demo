@@ -1,0 +1,28 @@
+{
+  "name": "deckgl-examples-map-tile",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "vite --open",
+    "start-local": "vite --config ../../vite.config.local.mjs",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@basemaps/geo": "^6.40.0",
+    "comlink": "^4.4.1",
+    "deck.gl": "^8.9.0",
+    "express": "^4.18.2",
+    "quadkey-tilemath": "^0.0.6",
+    "quadkeytools": "^0.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "socket.io": "^4.7.1",
+    "socket.io-client": "^4.7.1",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.0",
+    "vite": "^4.0.0"
+  }
+}
